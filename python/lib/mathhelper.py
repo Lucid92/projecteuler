@@ -8,3 +8,12 @@ def get_proper_divisors(n):
     
     # any numbers > n / 2 can't be proper divisors
     return [i for i in range(1, n // 2 + 1) if n % i == 0]
+
+def primes(n):
+    ''' Generates primes up to n using the sieve of eratosthenes.
+    Taken from Rosettacode '''
+    multiples = set()
+    for i in range(2, n+1):
+        if i not in multiples:
+            yield i
+            multiples.update(range(i*i, n+1, i))
