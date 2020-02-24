@@ -7,9 +7,8 @@ def is_triangle_number(n):
     # Therefore if (-1 +- sqrt(1 - 4 * (-2tn))) / 2 is an integer, n is a triangular number.
 
     v1 = (-1 + math.sqrt(1 - 4 * (-2 * n))) / 2
-    v2 = (-1 - math.sqrt(1 - 4 * (-2 * n))) / 2
 
-    return v1.is_integer() or v2.is_integer()
+    return v1.is_integer() and v1 > 0
 
 def letter_value(letter):
     return ord(letter) - 64 #ord('A') - 1
