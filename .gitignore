@@ -1,2 +1,5 @@
 redo.txt
 python/*/__pycache__
+.vscode/.ropeproject/config.py
+.vscode/.ropeproject/objectdb
+python/p042_words.txt

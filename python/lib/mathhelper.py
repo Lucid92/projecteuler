@@ -10,11 +10,27 @@ def get_proper_divisors(n):
     return [i for i in range(1, n // 2 + 1) if n % i == 0]
 
 def generate_primes(n):
-    ''' Generates primes up to n using the sieve of eratosthenes.
-    Taken from Rosettacode '''
+    ''' Generates primes up to n using the sieve of eratosthenes.'''
+    # Taken from Rosettacode
     multiples = set()
     for i in range(2, n+1):
         if i not in multiples:
             yield i
             multiples.update(range(i*i, n+1, i))
 
+def is_prime(n):
+    '''Tests if a number n is prime'''
+    if n <= 3:
+        return n > 1
+    elif n % 2 == 0 or n % 3 == 0:
+        return False
+
+    i = 5
+
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+
+        i += 6
+
+    return True
