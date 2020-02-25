@@ -12,7 +12,7 @@ def rotate(n):
     n_str = str(n)
     return int(n_str[1:] + n_str[0])
 
-primes = set(mathhelper.primes(1000000))
+primes = set(mathhelper.generate_primes(1000000))
 
 results = []
 

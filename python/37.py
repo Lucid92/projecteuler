@@ -5,7 +5,7 @@ class Direction(Enum):
     Left = 0,
     Right = 1
 
-primes = set(mathhelper.primes(1000000))
+primes = set(mathhelper.generate_primes(1000000))
 
 def is_truncatable_prime(n, direction : Direction):
     if n not in primes:

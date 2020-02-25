@@ -1,6 +1,6 @@
 import lib.mathhelper as mathhelper
 
-primes = set(mathhelper.primes(100000))
+primes = set(mathhelper.generate_primes(100000))
 
 def consecutive_primes(a, b):
     '''Finds how many consecutive primes there are in a polynomial in the form n^2 + an + b starting at n = 0.'''
