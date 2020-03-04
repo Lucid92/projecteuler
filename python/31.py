@@ -11,6 +11,7 @@ def give_change(target, values):
             ways += 1
             return
         else:
+            # to get combinations rather than permutations.
             new_values = values[0:values.index(v) + 1]
             give_change(new_target, new_values)
 
